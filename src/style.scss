@@ -1,0 +1,34 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@mixin blue4 {
+  color: var(--blue-4);
+}
+
+body {
+  @include flex-center-column;
+  background-color: var(--gray-8);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  @include blue4;
+}
+
+h2 {
+  font-size: 1.35rem;
+  @include blue4;
+}
